@@ -21,12 +21,6 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <button
-        type="submit"
-        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      >
-        Switch theme {theme}
-      </button>
 
       <FuelProvider theme={theme} fuelConfig={fuelConfig}>
         {children}
